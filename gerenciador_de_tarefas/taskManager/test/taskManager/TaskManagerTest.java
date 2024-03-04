@@ -11,37 +11,46 @@ import org.junit.jupiter.api.Test;
 
 class TaskManagerTest {
 	
-	TaskManager taskManager = new TaskManager();
-	List<Task> tasks = new ArrayList<Task>();
-	Task task1;
+	TaskManager taskManager;
+	PersonalTask task1;
 	
 	@BeforeEach
 	void setup() {
-		//will be used for instantiate some objects before tests
+		task1 = new PersonalTask("random title", "empty desc", "no expiration date", "Low");
+		taskManager = new TaskManager();
 	}
 	
 	@Test
 	void createTask() {
 		taskManager.createTask(task1.getTitle(), task1.getDesc(), task1.getExpDate(), task1.getPriority());
-		assertTrue(taskManager.getTasks.contains(task1));
+		PersonalTask equalTaskT1 = new PersonalTask(task1.getTitle(), task1.getDesc(), task1.getExpDate(), task1.getPriority());
+		
+		assertTrue(taskManager.getTasks().contains(equalTaskT1));
 	}
 	
 	@Test
 	void deleteTask() {
-		taskManager.tasks.add(task1);
-		assertTrue(taskManager.tasks.contains(task1));
+		PersonalTask equalTaskT1 = new PersonalTask(task1.getTitle(), task1.getDesc(), task1.getExpDate(), task1.getPriority());
+		taskManager.createTask(task1.getTitle(), task1.getDesc(),task1.getExpDate(), task1.getPriority());
+		assertTrue(taskManager.tasks.contains(equalTaskT1));
 		
+		System.out.println(taskManager.tasks.get(0).toString());
+
 		taskManager.deleteTask("random title");
-		assertFalse(taskMaanger.tasks.contains(task1));
+		assertFalse(taskManager.tasks.contains(equalTaskT1));
 	}
+
 	
 	@Test
 	void editTaskPriority() {
 		taskManager.tasks.add(task1);
 		assertTrue(task1.getPriority().equals("Low"));
-		taskManager.editTask("random title", "priority", "Medium");
+		taskManager.editTask("random title", "random title", "empty desc", "no exp date", "Medium");
 		
-		assertTrue(task1.getPriority().equals("Medium"));
+		PersonalTask editedTask = taskManager.getTask("random title");
+		assertNotNull(editedTask);
+		
+		assertTrue(editedTask.getPriority().equals("Medium"));
 	}
 
 }
