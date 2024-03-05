@@ -73,7 +73,7 @@ class TaskManagerTest {
 	}
 	
 	@Test 
-	void getTask() {
+	void detailTask() {
 		PersonalTask task2 = new PersonalTask("random title 2", "xd", "06-06-2024", "Low");
 		taskManager.createTask(task2.getTitle(), task2.getDesc(), task2.getExpDate(), task2.getPriority());
 		
