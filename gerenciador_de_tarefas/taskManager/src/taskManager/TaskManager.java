@@ -5,7 +5,7 @@ import java.util.List;
 
 public class TaskManager {
 	
-	List<PersonalTask> tasks;
+	private List<PersonalTask> tasks;
 	
 	public TaskManager() {
 		this.tasks = new ArrayList<PersonalTask>();
