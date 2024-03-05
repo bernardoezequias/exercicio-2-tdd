@@ -47,6 +47,26 @@ public class TaskManager {
 	    }
 	}
 	
+	public String detailTask(String taskTitle) {
+		String s = "Here's the details of task: " + taskTitle + "\n";
+		PersonalTask task = getTask(taskTitle);
+		
+		s += "Description: " + task.getDesc() + "\n";
+		s += "Expiration date: " + task.getExpDate() + "\n";
+		s += "Priority: " + task.getPriority();
+		
+		return s;
+	}
+	
+	public String listTasks() {
+		String s = "There's a list of your tasks: " + "\n";
+		for (int i = 0; i < this.tasks.size(); i++) {
+			s += (i+1) + " - " + this.tasks.get(i).getTitle() + "\n";
+		}
+		
+		return s.strip();
+	}
+	
 }
 		
 	
