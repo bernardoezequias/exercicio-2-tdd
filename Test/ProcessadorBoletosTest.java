@@ -30,7 +30,7 @@ class ProcessadorBoletoTest {
 
         assertEquals(1, fatura.getPagamentos().size());
         Pagamento pagamento = fatura.getPagamentos().get(0);
-        assertEquals(400.00, pagamento.getValor());
+        assertEquals(400.00, pagamento.getValorPago());
         assertEquals("BOLETO", pagamento.getTipo());
     }
 
@@ -46,7 +46,7 @@ class ProcessadorBoletoTest {
 
         processador.processarBoletos(boletos, fatura);
 
-        assertEquals("PAGA", fatura.getPagamento());
+        assertEquals("PAGA", fatura.getTipo());
     }
 
     @Test
@@ -59,7 +59,7 @@ class ProcessadorBoletoTest {
 
         processador.processarBoletos(boletos, fatura);
 
-        assertEquals("NÃO PAGA", fatura.getPagamento());
+        assertEquals("NÃO PAGA", fatura.getTipo());
     }
 
 
