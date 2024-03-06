@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/processadorBoletos/Test" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/processadorBoletos/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/processadorBoletos/src/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/processadorBoletos/out" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
