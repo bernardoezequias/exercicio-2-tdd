@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class Atividade3 {
+public class Atividade3 {
 	
 	TaskManager taskManager;
 	
@@ -52,7 +52,7 @@ class Atividade3 {
 	void CriarTaskTipoInvalido() {
 		PersonalTask task1 = new PersonalTask("random title", "empty desc", "01-01-2024", "1");
 		
-		taskManager.createTask(task1.getTitle(), task1.getDesc(), task1.getExpDate(), 1);
+		taskManager.createTask(task1.getTitle(), task1.getDesc(), task1.getExpDate(), "1");
 		
 		throw new IllegalArgumentException("Invalid type on field(s)");
 	}

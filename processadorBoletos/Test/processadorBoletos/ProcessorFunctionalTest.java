@@ -1,3 +1,4 @@
+package processadorBoletos;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
@@ -7,9 +8,9 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class Atividade3 {
-    private ProcessadorBoletos processador;
-    private Fatura fatura;
+public class ProcessorFunctionalTest {
+    ProcessadorBoletos processador;
+    Fatura fatura;
 
 
     @BeforeEach
@@ -21,13 +22,13 @@ public class Atividade3 {
     @Test
     public void testFaturaNegativa() {
         fatura = new Fatura("Joao", new Date(), -1500.00);
-        throw new IllegalArgumentException("Fatura com valor negativo");
+        throw new IllegalArgumentException("processadorBoletos.Fatura com valor negativo");
     }
 
     @Test
     public void testFaturaZero() {
         fatura = new Fatura("Joao", new Date(), 0);
-        throw new IllegalArgumentException("Fatura com valor zero");
+        throw new IllegalArgumentException("processadorBoletos.Fatura com valor zero");
     }
 
     @Test
@@ -84,13 +85,13 @@ public class Atividade3 {
     @Test
     public void testBoletoNegativo() {
         Boleto boleto = new Boleto("1", new Date(), -1000.00);
-        throw new IllegalArgumentException("Boleto com valor negativo");
+        throw new IllegalArgumentException("processadorBoletos.Boleto com valor negativo");
     }
 
     @Test
     public void testBoletoZero() {
         Boleto boleto = new Boleto("1", new Date(), 0);
-        throw new IllegalArgumentException("Boleto com valor Zero");
+        throw new IllegalArgumentException("processadorBoletos.Boleto com valor Zero");
     }
 
     @Test
