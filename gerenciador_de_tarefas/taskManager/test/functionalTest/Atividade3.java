@@ -1,9 +1,9 @@
-package taskManager;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import taskManager.PersonalTask;
+import taskManager.TaskManager;
 
 public class Atividade3 {
 	
