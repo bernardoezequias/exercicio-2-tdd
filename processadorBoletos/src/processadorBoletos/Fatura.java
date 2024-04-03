@@ -11,6 +11,9 @@ public class Fatura {
     private double valorTotal;
     private String tipo;
     public Fatura(String name, Date date, double valorTotal) {
+        if (valorTotal <= 0) {
+          throw new IllegalArgumentException();
+        }
         this.date = date;
         this.name = name;
         this.valorTotal = valorTotal;

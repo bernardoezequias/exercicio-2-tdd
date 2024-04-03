@@ -7,6 +7,9 @@ public class Boleto {
     private Date date;
     private double valorPago;
     public Boleto(String codigo, Date date, double valorPago) {
+        if (valorPago <= 0) {
+            throw new IllegalArgumentException();
+        }
         this.codigo = codigo;
         this.date = date;
         this.valorPago = valorPago;

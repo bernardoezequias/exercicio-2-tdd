@@ -14,6 +14,7 @@
       <sourceFolder url="file://$MODULE_DIR$/processadorBoletos/functionalTest" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/processadorBoletos/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/processadorBoletos/src/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/processadorBoletos/Test/junit5Tests" isTestSource="true" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
